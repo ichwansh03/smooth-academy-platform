@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { brand, headerActions, navLinks } from "@/app/data/content";
 
 export default function Header() {
@@ -25,9 +26,9 @@ export default function Header() {
 
       <div className="actions">
         {headerActions.map((action) => (
-          <button key={action.label} type="button" className="btn">
+          <Link key={action.label} href="/login" className="btn">
             {action.label}
-          </button>
+          </Link>
         ))}
       </div>
     </header>
