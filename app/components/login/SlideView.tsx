@@ -1,14 +1,21 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { autoplayMs, loginSlides } from "@/app/data/login";
+import type { ReactNode } from "react";
+import { autoplayMs } from "@/app/data/slides";
+import type { CarouselSlide } from "@/app/data/slides";
 import { brand } from "@/app/data/content";
 
-export default function SlideView() {
+type SlideViewProps = {
+  slides: CarouselSlide[];
+  footer?: ReactNode;
+};
+
+export default function SlideView({ slides, footer }: SlideViewProps) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const touchStartX = useRef(0);
-  const total = loginSlides.length;
+  const total = slides.length;
 
   const goTo = useCallback(
     (next: number) => setIndex(((next % total) + total) % total),
@@ -58,7 +65,7 @@ export default function SlideView() {
             }
           }}
         >
-          {loginSlides.map((slide, i) => (
+          {slides.map((slide, i) => (
             <div
               key={slide.id}
               className={i === index ? "slide active" : "slide"}
@@ -71,7 +78,7 @@ export default function SlideView() {
         </div>
 
         <div className="slide-dots">
-          {loginSlides.map((slide, i) => (
+          {slides.map((slide, i) => (
             <button
               key={slide.id}
               type="button"
@@ -100,6 +107,8 @@ export default function SlideView() {
             →
           </button>
         </div>
+
+        {footer}
       </div>
     </div>
   );

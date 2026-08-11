@@ -1,13 +1,8 @@
 // Login page content: carousel slides + form copy.
 
-export type LoginSlide = {
-  id: string;
-  icon: string;
-  title: string;
-  description: string;
-};
+import type { CarouselSlide } from "@/app/data/slides";
 
-export const loginSlides: LoginSlide[] = [
+export const loginSlides: CarouselSlide[] = [
   {
     id: "anytime",
     icon: "📚",
@@ -60,5 +55,3 @@ export const loginForm = {
     empty: "Harap isi username dan password terlebih dahulu.",
   },
 };
-
-export const autoplayMs = 4500;

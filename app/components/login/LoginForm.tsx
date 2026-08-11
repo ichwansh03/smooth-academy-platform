@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { FormEvent } from "react";
+import Link from "next/link";
 import { loginForm } from "@/app/data/login";
 
 export default function LoginForm() {
@@ -74,7 +75,8 @@ export default function LoginForm() {
       </div>
 
       <div className="form-footer">
-        {loginForm.footerText} <a href="#">{loginForm.footerLinkLabel}</a>
+        {loginForm.footerText}{" "}
+        <Link href="/register">{loginForm.footerLinkLabel}</Link>
       </div>
     </div>
   );
