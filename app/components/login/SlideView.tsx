@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import { autoplayMs } from "@/app/data/slides";
@@ -40,7 +41,15 @@ export default function SlideView({ slides, footer }: SlideViewProps) {
   return (
     <div className="slide-view">
       <div className="brand">
-        <div className="logo-icon">{brand.icon}</div>
+        <div className="logo-icon">
+          <Image
+            src="/smooth_logo.jpeg"
+            alt={`${brand.name} ${brand.accent} logo`}
+            width={40}
+            height={40}
+            style={{ width: "100%", height: "100%", objectFit: "contain" }}
+          />
+        </div>
         <div className="logo-text">
           {brand.name}
           <span>{brand.accent}</span>

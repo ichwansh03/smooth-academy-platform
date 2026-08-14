@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { brand, headerActions, navLinks } from "@/app/data/content";
 
@@ -5,7 +6,15 @@ export default function Header() {
   return (
     <header className="header">
       <div className="logo">
-        <div className="logo-icon">{brand.icon}</div>
+        <div className="logo-icon">
+          <Image
+            src="/smooth_logo.jpeg"
+            alt={`${brand.name} ${brand.accent} logo`}
+            width={48}
+            height={48}
+            style={{ width: "100%", height: "100%", objectFit: "contain" }}
+          />
+        </div>
         <div className="logo-text">
           {brand.name}
           <span>{brand.accent}</span>

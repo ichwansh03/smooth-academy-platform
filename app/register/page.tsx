@@ -5,7 +5,7 @@ import SlideStats from "@/app/components/register/SlideStats";
 import { registerSlides } from "@/app/data/register";
 
 export const metadata: Metadata = {
-  title: "Zisaa – Daftar",
+  title: "SmoothAcademy – Daftar",
 };
 
 export default function RegisterPage() {

@@ -4,7 +4,7 @@ import LoginForm from "@/app/components/login/LoginForm";
 import { loginSlides } from "@/app/data/login";
 
 export const metadata: Metadata = {
-  title: "Zisaa – Login",
+  title: "SmoothAcademy – Login",
 };
 
 export default function LoginPage() {

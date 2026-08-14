@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { brand, copyright, footerColumns, socials } from "@/app/data/content";
 
 export default function Footer() {
@@ -7,7 +8,15 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <div className="logo">
-              <div className="logo-icon">{brand.icon}</div>
+              <div className="logo-icon">
+                <Image
+                  src="/smooth_logo.jpeg"
+                  alt={`${brand.name} ${brand.accent} logo`}
+                  width={40}
+                  height={40}
+                  style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                />
+              </div>
               <div className="logo-text">
                 {brand.name}
                 <span>{brand.accent}</span>
