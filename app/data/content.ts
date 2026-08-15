@@ -17,7 +17,7 @@ export type NavLink = {
 
 export const navLinks: NavLink[] = [
   { label: "Home", href: "/", active: true },
-  { label: "Programs", href: "#" },
+  { label: "Programs", href: "/programs" },
   { label: "Mentors", href: "#" },
   { label: "Pricing", href: "#" },
   { label: "Contact", href: "#" },
@@ -107,8 +107,8 @@ export const footerColumns: FooterColumn[] = [
   {
     title: "Quick Links",
     links: [
-      { label: "Home", href: "#" },
-      { label: "Programs", href: "#" },
+      { label: "Home", href: "/" },
+      { label: "Programs", href: "/programs" },
       { label: "Mentors", href: "#" },
       { label: "Pricing", href: "#" },
     ],
