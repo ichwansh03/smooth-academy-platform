@@ -1820,3 +1820,75 @@ body {
   padding: 10px 16px 6px;
 }
 
+/* ── Phone refinements ──────────────────────────────── */
+@media (max-width: 600px) {
+  .games-fab {
+    right: 16px;
+    bottom: 16px;
+    padding: 12px 18px;
+    font-size: 13px;
+    gap: 6px;
+  }
+  .form-group input {
+    font-size: 16px;
+  }
+  .video-page {
+    padding-bottom: 24px;
+  }
+  .video-page .page-header {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    gap: 4px;
+  }
+  .nav a {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+  .btn {
+    padding: 9px 16px;
+  }
+  .hero h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    padding: 8px 8px 0;
+  }
+  .app {
+    padding: 12px 12px 0;
+    border-radius: 24px;
+  }
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+  }
+  .logo-text {
+    font-size: 20px;
+  }
+  .nav a {
+    padding: 6px 10px;
+  }
+  .video-page .page-header h2 {
+    font-size: 18px;
+  }
+  .video-page .course-meta {
+    gap: 8px;
+  }
+  .video-playlist {
+    max-height: 240px;
+  }
+  .footer {
+    padding: 8px 12px 12px;
+  }
+  .footer-inner {
+    padding: 20px 14px 16px;
+    border-radius: 20px 20px 16px 16px;
+  }
+}
+
