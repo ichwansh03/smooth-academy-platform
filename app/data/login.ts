@@ -5,28 +5,28 @@ import type { CarouselSlide } from "@/app/data/slides";
 export const loginSlides: CarouselSlide[] = [
   {
     id: "anytime",
-    icon: "📚",
+    icon: "book",
     title: "Learn Anytime, Anywhere",
     description:
       "Access high-quality courses from anywhere in the world, at your own pace.",
   },
   {
     id: "expert-led",
-    icon: "🎯",
+    icon: "target",
     title: "Expert-Led Programs",
     description:
       "Learn from industry professionals with real-world experience and proven expertise.",
   },
   {
     id: "mentorship",
-    icon: "🤝",
+    icon: "handshake",
     title: "1-to-1 Mentorship",
     description:
       "Get personalized guidance and support from dedicated mentors who care about your growth.",
   },
   {
     id: "community",
-    icon: "🏆",
+    icon: "trophy",
     title: "Join 20,000+ Students",
     description:
       "Become part of a thriving community of learners and achievers worldwide.",
@@ -35,7 +35,7 @@ export const loginSlides: CarouselSlide[] = [
 
 export const loginForm = {
   title: "Masuk",
-  titleEmoji: "👋",
+  titleEmoji: "wave",
   subtitle: "Silakan masuk ke akun Anda untuk melanjutkan",
   usernameLabel: "Username",
   usernamePlaceholder: "Masukkan username Anda",
@@ -46,8 +46,8 @@ export const loginForm = {
   submitLabel: "Login",
   dividerLabel: "atau",
   socials: [
-    { id: "google", icon: "🔗", label: "Google" },
-    { id: "linkedin", icon: "💼", label: "LinkedIn" },
+    { id: "google", icon: "google", label: "Google" },
+    { id: "linkedin", icon: "linkedin", label: "LinkedIn" },
   ],
   footerText: "Belum punya akun?",
   footerLinkLabel: "Daftar",

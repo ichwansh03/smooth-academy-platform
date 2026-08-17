@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Icon from "@/app/components/Icon";
 import { brand, copyright, footerColumns, socials } from "@/app/data/content";
 
 export default function Footer() {
@@ -42,7 +43,7 @@ export default function Footer() {
           <div className="socials">
             {socials.map((social) => (
               <a key={social.label} href={social.href} aria-label={social.label}>
-                {social.icon}
+                <Icon name={social.icon} />
               </a>
             ))}
           </div>

@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+.icon {
+  display: inline-block;
+  vertical-align: -0.125em;
+}
+
 :root {
   /* ── Palette: soft green neumorphism ─────────────── */
   --bg: #eaf3ea;

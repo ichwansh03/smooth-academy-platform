@@ -72,28 +72,28 @@ export type Feature = {
 export const features: Feature[] = [
   {
     id: "mentors",
-    icon: "🏆",
+    icon: "trophy",
     title: "Best Mentors",
     description:
       "Our top mentors bring valuable knowledge and experience to guide you on your journey.",
   },
   {
     id: "price",
-    icon: "💰",
+    icon: "cash",
     title: "Best Price",
     description:
       "We offer competitive pricing on all our courses, ensuring you receive the best value for money.",
   },
   {
     id: "learning",
-    icon: "📖",
+    icon: "book",
     title: "Easy to Learn",
     description:
       "With user-friendly navigation and engaging materials, you can dive into your studies hassle-free.",
   },
   {
     id: "discussion",
-    icon: "💬",
+    icon: "chat",
     title: "1 to 1 Discussion",
     description:
       "Our 1-to-1 mentoring connects you with dedicated professionals for your queries.",
@@ -134,10 +134,10 @@ export const footerColumns: FooterColumn[] = [
 ];
 
 export const socials = [
-  { label: "Twitter", icon: "🐦", href: "#" },
-  { label: "LinkedIn", icon: "🔗", href: "#" },
-  { label: "YouTube", icon: "▶️", href: "#" },
-  { label: "Instagram", icon: "📷", href: "#" },
+  { label: "Twitter", icon: "twitter", href: "#" },
+  { label: "LinkedIn", icon: "linkedin", href: "#" },
+  { label: "YouTube", icon: "youtube", href: "#" },
+  { label: "Instagram", icon: "instagram", href: "#" },
 ];
 
 export const copyright = "© 2026 Smooth Academy. All rights reserved.";

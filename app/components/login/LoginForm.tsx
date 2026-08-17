@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
 import Link from "next/link";
+import Icon from "@/app/components/Icon";
 import { loginForm } from "@/app/data/login";
 
 export default function LoginForm() {
@@ -22,7 +23,7 @@ export default function LoginForm() {
     <div className="login-form">
       <div className="form-header">
         <h2>
-          {loginForm.title} <span>{loginForm.titleEmoji}</span>
+          {loginForm.title} <Icon name={loginForm.titleEmoji} />
         </h2>
         <p>{loginForm.subtitle}</p>
       </div>
@@ -69,7 +70,7 @@ export default function LoginForm() {
       <div className="social-login">
         {loginForm.socials.map((social) => (
           <button key={social.id} type="button">
-            {social.icon} {social.label}
+            <Icon name={social.icon} /> {social.label}
           </button>
         ))}
       </div>

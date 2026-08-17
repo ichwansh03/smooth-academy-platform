@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 import Link from "next/link";
+import Icon from "@/app/components/Icon";
 import { registerForm } from "@/app/data/register";
 
 export default function RegisterForm() {
@@ -46,7 +47,7 @@ export default function RegisterForm() {
     <div className="register-form">
       <div className="form-header">
         <h2>
-          {registerForm.title} <span>{registerForm.titleEmoji}</span>
+          {registerForm.title} <Icon name={registerForm.titleEmoji} />
         </h2>
         <p>{registerForm.subtitle}</p>
       </div>
@@ -94,7 +95,7 @@ export default function RegisterForm() {
       <div className="social-login">
         {registerForm.socials.map((social) => (
           <button key={social.id} type="button">
-            {social.icon} {social.label}
+            <Icon name={social.icon} /> {social.label}
           </button>
         ))}
       </div>

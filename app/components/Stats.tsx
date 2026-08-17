@@ -1,4 +1,5 @@
 import { stats } from "@/app/data/content";
+import Icon from "@/app/components/Icon";
 
 export default function Stats() {
   return (
@@ -9,7 +10,11 @@ export default function Stats() {
           className={stat.rating ? "stat-item rating" : "stat-item"}
         >
           <div className="stat-number">
-            {stat.rating && <span className="star">★</span>}
+            {stat.rating && (
+              <span className="star">
+                <Icon name="star" />
+              </span>
+            )}
             {stat.value}
             {stat.suffix && <span className="plus">{stat.suffix}</span>}
           </div>

@@ -5,27 +5,27 @@ import type { CarouselSlide } from "@/app/data/slides";
 export const registerSlides: CarouselSlide[] = [
   {
     id: "start",
-    icon: "🚀",
+    icon: "rocket",
     title: "Mulai Perjalanan Belajarmu",
     description:
       "Daftar sekarang dan akses ribuan kursus berkualitas dari mentor terbaik.",
   },
   {
     id: "courses",
-    icon: "📖",
+    icon: "book",
     title: "Akses Kursus Berkualitas",
     description:
       "Pelajari keterampilan baru dengan materi terkini dan studi kasus nyata.",
   },
   {
     id: "mentor",
-    icon: "🤝",
+    icon: "handshake",
     title: "Bimbingan 1-on-1 dari Mentor",
     description: "Dapatkan pendampingan personal dari para ahli di bidangnya.",
   },
   {
     id: "community",
-    icon: "🏆",
+    icon: "trophy",
     title: "Bergabung dengan 20.000+ Siswa",
     description: "Jadilah bagian dari komunitas pembelajar yang berkembang pesat.",
   },
@@ -53,7 +53,7 @@ export const registerStats: RegisterStat[] = [
 
 export const registerForm = {
   title: "Buat Akun",
-  titleEmoji: "✨",
+  titleEmoji: "sparkles",
   subtitle: "Daftar untuk memulai perjalanan belajar Anda",
   fields: [
     { id: "firstName", label: "First Name", placeholder: "Nama depan", type: "text", fullWidth: false },
@@ -70,8 +70,8 @@ export const registerForm = {
   submitLabel: "Daftar",
   dividerLabel: "atau",
   socials: [
-    { id: "google", icon: "🔗", label: "Google" },
-    { id: "linkedin", icon: "💼", label: "LinkedIn" },
+    { id: "google", icon: "google", label: "Google" },
+    { id: "linkedin", icon: "linkedin", label: "LinkedIn" },
   ],
   footerText: "Sudah punya akun?",
   footerLinkLabel: "Masuk",

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Icon from "@/app/components/Icon";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import { autoplayMs } from "@/app/data/slides";
@@ -79,7 +80,9 @@ export default function SlideView({ slides, footer }: SlideViewProps) {
               key={slide.id}
               className={i === index ? "slide active" : "slide"}
             >
-              <span className="slide-icon">{slide.icon}</span>
+              <span className="slide-icon">
+                <Icon name={slide.icon} />
+              </span>
               <h3>{slide.title}</h3>
               <p>{slide.description}</p>
             </div>

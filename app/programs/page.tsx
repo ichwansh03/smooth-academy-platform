@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import Icon from "@/app/components/Icon";
 
 type VideoStatus = "watched" | "current" | "upcoming";
 
@@ -151,7 +152,7 @@ export default function ProgramsPage() {
           <div className="page-header">
             <div>
               <h2>
-                📺 <span>Video Education</span>
+                <Icon name="tv" /> <span>Video Education</span>
               </h2>
               <div className="course-sub">
                 <span>Web Development Bootcamp</span>
@@ -159,9 +160,13 @@ export default function ProgramsPage() {
               </div>
             </div>
             <div className="course-meta">
-              <span>⭐ 4.8 (1.2k reviews)</span>
+              <span>
+                <Icon name="star" /> 4.8 (1.2k reviews)
+              </span>
               <span>•</span>
-              <span>📚 {pct}% completed</span>
+              <span>
+                <Icon name="book" /> {pct}% completed
+              </span>
             </div>
           </div>
 
@@ -181,7 +186,9 @@ export default function ProgramsPage() {
                     className="video-placeholder"
                     onClick={() => setPlaying(true)}
                   >
-                    <div className="play-icon">▶</div>
+                    <div className="play-icon">
+                      <Icon name="play" />
+                    </div>
                     <h3>{current.title}</h3>
                     <p>Klik untuk memulai video</p>
                   </button>
@@ -202,7 +209,9 @@ export default function ProgramsPage() {
 
             <div className="video-playlist">
               <div className="playlist-header">
-                <h4>📋 Course Content</h4>
+                <h4>
+                <Icon name="list" /> Course Content
+              </h4>
                 <span className="playlist-count">{videoData.length} lessons</span>
               </div>
               <div className="playlist-scroll" ref={listRef}>
@@ -215,12 +224,12 @@ export default function ProgramsPage() {
                         const isActive = video.id === currentId;
                         const status =
                           isActive && playing ? "current" : video.status;
-                        const thumb =
+                        const thumbIcon =
                           status === "watched"
-                            ? "✓"
+                            ? "check"
                             : isActive
-                              ? "▶"
-                              : String(index + 1);
+                              ? "play"
+                              : null;
                         const badge = statusBadge[status];
                         return (
                           <button
@@ -230,7 +239,13 @@ export default function ProgramsPage() {
                             className={`playlist-item${isActive ? " active" : ""}`}
                             onClick={() => playVideo(video.id)}
                           >
-                            <span className="thumb">{thumb}</span>
+                            <span className="thumb">
+                              {thumbIcon ? (
+                                <Icon name={thumbIcon} />
+                              ) : (
+                                index + 1
+                              )}
+                            </span>
                             <span className="info">
                               <span className="title">{video.title}</span>
                               <span className="duration">{video.duration}</span>
@@ -255,7 +270,7 @@ export default function ProgramsPage() {
         rel="noopener noreferrer"
         className="games-fab"
       >
-        🎮 Try Games
+        <Icon name="gamepad" /> Try Games
       </a>
     </>
   );
